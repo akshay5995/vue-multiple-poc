@@ -1,36 +1,39 @@
 {
-    "extends": "@nrwl/workspace/presets/npm.json",
-    "affected": {
-      "defaultBase": "main"
-    },
-    "npmScope": "@akshay5995",
-    "tasksRunnerOptions": {
-      "default": {
-        "runner": "@nrwl/workspace/tasks-runners/default",
-        "options": {
-            "cacheDirectory": "./.tmp/nx",
-            "cacheableOperations": [
-              "build",
-              "test"
-            ]
-          }
+  "extends": "@nrwl/workspace/presets/npm.json",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "npmScope": "@akshay5995",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheDirectory": "./.tmp/nx",
+        "cacheableOperations": ["build", "test"]
       }
-    },
-    "targetDependencies": {
-        "build": [
-          {
-            "target": "build",
-            "projects": "dependencies"
-          }
-        ]
-      },
-    "implicitDependencies": {
-      "pnpm-workspace.yaml": "*",
-      "pnpm-lock.yaml": "*",
-      "package.json": {
-        "dependencies": "*",
-        "devDependencies": "*"
-      },
-      "nx.json": "*"
     }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ],
+    "test:unit": [
+      {
+        "target": "test",
+        "projects": "self"
+      }
+    ]
+  },
+  "implicitDependencies": {
+    "pnpm-workspace.yaml": "*",
+    "pnpm-lock.yaml": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "nx.json": "*"
   }
+}

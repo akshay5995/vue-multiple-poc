@@ -16,7 +16,6 @@ importers:
 
   apps/vue-2-app:
     specifiers:
-      '@vitejs/plugin-vue': ^2.3.3
       vite: ^2.9.9
       vite-plugin-vue2: ^2.0.1
       vue: '2'
@@ -24,7 +23,6 @@ importers:
     dependencies:
       vue: 2.6.14
     devDependencies:
-      '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@2.6.14
       vite: 2.9.9
       vite-plugin-vue2: 2.0.1_dj3dtukdyynhbiqf2xbv2ocyei
       vue-template-compiler: 2.6.14
@@ -32,13 +30,25 @@ importers:
   apps/vue-3-app:
     specifiers:
       '@vitejs/plugin-vue': ^2.3.3
+      awesome-button: workspace:*
       vite: ^2.9.9
       vue: ^3.2.25
     dependencies:
+      awesome-button: link:../../packages/awesome-button
       vue: 3.2.36
     devDependencies:
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.36
       vite: 2.9.9
+
+  packages/awesome-button:
+    specifiers:
+      '@vitejs/plugin-vue': ^2.3.3
+      vite: ^2.9.9
+      vue: ^3.2.25
+    devDependencies:
+      '@vitejs/plugin-vue': 2.3.3_vite@2.9.9+vue@3.2.36
+      vite: 2.9.9
+      vue: 3.2.36
 
 packages:
 
@@ -1214,17 +1224,6 @@ packages:
     resolution: {integrity: sha512-T8Yc9wt/5LbJyCaLiHPReJa0kApcIgJ7Bn735GjItUfh08Z1pJvu8QZqb9s+mMvKV6WUQRV7K2R46YbjMXTTJw==}
     dependencies:
       '@types/yargs-parser': 21.0.0
-    dev: true
-
-  /@vitejs/plugin-vue/2.3.3_vite@2.9.9+vue@2.6.14:
-    resolution: {integrity: sha512-SmQLDyhz+6lGJhPELsBdzXGc+AcaT8stgkbiTFGpXPe8Tl1tJaBw1A6pxDqDuRsVkD8uscrkx3hA7QDOoKYtyw==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      vite: ^2.5.10
-      vue: ^3.2.25
-    dependencies:
-      vite: 2.9.9
-      vue: 2.6.14
     dev: true
 
   /@vitejs/plugin-vue/2.3.3_vite@2.9.9+vue@3.2.36:
@@ -4448,6 +4447,7 @@ packages:
 
   /vue/2.6.14:
     resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==}
+    dev: false
 
   /vue/3.2.36:
     resolution: {integrity: sha512-5yTXmrE6gW8IQgttzHW5bfBiFA6mx35ZXHjGLDmKYzW6MMmYvCwuKybANRepwkMYeXw2v1buGg3/lPICY5YlZw==}

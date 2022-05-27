@@ -1,0 +1,26 @@
+{
+  "name": "awesome-button",
+  "version": "0.0.1",
+  "files": ["dist"],
+  "main": "./dist/awesome-button.umd.js",
+  "module": "./dist/awesome-button.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/awesome-button.es.js",
+      "require": "./dist/awesome-button.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "vue": "^3.2.25",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.9"
+  }
+}
