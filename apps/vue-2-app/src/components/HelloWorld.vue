@@ -3,16 +3,20 @@
     <h1>{{ msg }}</h1>
 
     <p>
-      <a href="https://vitejs.dev/guide/features.html" target="_blank"
-        >Vite Documentation</a
-      >
+      <a
+        href="https://vitejs.dev/guide/features.html"
+        target="_blank"
+      >Vite Documentation</a>
       |
-      <a href="https://vuejs.org/v2/guide/" target="_blank"
-        >Vue 2 Documentation</a
-      >
+      <a
+        href="https://vuejs.org/v2/guide/"
+        target="_blank"
+      >Vue 2 Documentation</a>
     </p>
 
-    <button @click="count++">count is: {{ count }}</button>
+    <button @click="count++">
+      count is: {{ count }}
+    </button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test hot module replacement.

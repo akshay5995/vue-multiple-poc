@@ -6,9 +6,14 @@ import { AwesomeButton } from "awesome-button";
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
-  <AwesomeButton msg="hello" />
+  <div>
+    <img
+      alt="Vue logo"
+      src="./assets/logo.png"
+    >
+    <HelloWorld msg="Hello Vue 3 + Vite" />
+    <AwesomeButton msg="hello" />
+  </div>
 </template>
 
 <style>

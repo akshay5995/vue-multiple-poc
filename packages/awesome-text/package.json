@@ -1,0 +1,27 @@
+{
+  "name": "awesome-text",
+  "version": "0.0.1",
+  "files": ["dist"],
+  "main": "./dist/awesome-text.umd.js",
+  "module": "./dist/awesome-text.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/awesome-text.es.js",
+      "require": "./dist/awesome-text.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "vue": "^2.6.14",
+    "vite": "^2.9.9",
+    "vite-plugin-vue2": "^2.0.1",
+    "vue-template-compiler": "^2.6.14"
+  }
+}

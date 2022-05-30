@@ -3,6 +3,10 @@
   "affected": {
     "defaultBase": "main"
   },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
+  },
   "npmScope": "@akshay5995",
   "tasksRunnerOptions": {
     "default": {

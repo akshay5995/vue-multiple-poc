@@ -1,0 +1,21 @@
+{
+  "name": "awesome-util",
+  "private": true,
+  "version": "0.0.1",
+  "files": ["dist"],
+  "main": "./dist/awesome-util.umd.js",
+  "module": "./dist/awesome-util.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/awesome-util.es.js",
+      "require": "./dist/awesome-util.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9"
+  }
+}
