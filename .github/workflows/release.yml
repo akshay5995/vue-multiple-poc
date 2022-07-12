@@ -3,6 +3,12 @@ name: Release
 on:
   repository_dispatch:
     types: [webhook]
+  workflow_dispatch:
+    inputs:
+      rollbackVersion:
+        description: 'Rollback target git tag'
+        required: false
+        type: string
 
 jobs:
   build:
@@ -15,4 +21,5 @@ jobs:
       - name: Intall dependencies
         run: echo "Installing"
       - name: echo version
-        run: echo ${{ github.event.client_payload.rollbackVersion }}
+        run: echo ${{ github.event.client_payload.rollbackVersion ||  github.event.inputs.rollbackVersion }}
+
